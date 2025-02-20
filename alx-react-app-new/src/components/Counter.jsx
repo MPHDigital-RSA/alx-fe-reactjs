@@ -2,14 +2,14 @@ import React from 'react'
 import { useState } from 'react'
 
 function Counter() {
-    const [num, setNum] = useState(0);
+    const [count, setCount] = useState(0);
 
     return (
         <div>
-            <p>{num}</p>
-            <button onClick={() => (setNum(num + 1))}>Increment</button>
-            <button onClick={() => (setNum(num - 1))}>Decrement</button>
-            <button onClick={() => (setNum(0))}>Reset</button>
+            <p>{count}</p>
+            <button onClick={() => (setCount(count + 1))}>Increment</button>
+            <button onClick={() => (setCount(count - 1))} style={{ marginInline: 10 }}>Decrement</button>
+            <button onClick={() => (setCount(0))}>Reset</button>
         </div>
     )
 }
