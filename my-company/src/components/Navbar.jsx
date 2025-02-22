@@ -5,7 +5,7 @@ import Logo from '../assets/react.svg'
 function Navbar() {
     return (
         <>
-            <header style={{ paddingTop: 30, paddingBottom: 30, position: 'absolute', width: '100% ' }}>
+            <header style={{ paddingTop: 30, paddingBottom: 30, position: 'absolute', width: '100% ', backgroundColor: 'white' }}>
                 <nav style={{ display: "flex", maxWidth: 1200, margin: "auto", alignItems: "center", justifyContent: "space-between", gap: 30 }}>
                     <Link to="/">
                         <img src={Logo} alt="logo image" />
