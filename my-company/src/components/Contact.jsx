@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import Navbar from './Navbar'
 
 function Contact() {
 
@@ -20,6 +21,7 @@ function Contact() {
 
     return (
         <div>
+            <Navbar />
             <div style={{ padding: '20px', height: "100vh", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                 <h1>Contact Us</h1>
                 <form onSubmit={handleSubmit}>
