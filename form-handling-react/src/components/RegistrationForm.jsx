@@ -5,7 +5,7 @@ const RegistrationFrom = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData(prevState => ({ ...prevState, [username]: value }));
+        setFormData(prevState => ({ ...prevState, [name]: value }));
     };
 
     const handleSubmit = (e) => {
@@ -18,21 +18,21 @@ const RegistrationFrom = () => {
             <input
                 type="text"
                 name="name"
-                value={username}
+                value={formData.username}
                 onChange={handleChange}
                 placeholder='name'
             />
             <input
                 type="email"
                 name="email"
-                value={email}
+                value={formData.email}
                 onChange={handleChange}
                 placeholder='email'
             />
             <input
                 type="password"
                 name="password"
-                value={password}
+                value={formData.password}
                 onChange={handleChange}
                 placeholder='password'
             />
