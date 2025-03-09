@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
 const RegistrationFrom = () => {
-    const [formData, setFormData] = useState({ name: '', email: '', password: '' });
+    const [formData, setFormData] = useState({ username: '', email: '', password: '' });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData(prevState => ({ ...prevState, [name]: value }));
+        setFormData(prevState => ({ ...prevState, [username]: value }));
     };
 
     const handleSubmit = (e) => {
@@ -18,21 +18,21 @@ const RegistrationFrom = () => {
             <input
                 type="text"
                 name="name"
-                value={formData.name}
+                value={username}
                 onChange={handleChange}
                 placeholder='name'
             />
             <input
                 type="email"
                 name="email"
-                value={formData.email}
+                value={email}
                 onChange={handleChange}
                 placeholder='email'
             />
             <input
                 type="password"
                 name="password"
-                value={formData.password}
+                value={password}
                 onChange={handleChange}
                 placeholder='password'
             />
