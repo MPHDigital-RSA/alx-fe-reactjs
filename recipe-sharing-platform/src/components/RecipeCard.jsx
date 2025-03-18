@@ -1,9 +1,6 @@
-import React, { useState } from 'react'
-import recipeData from '../data.json'
+import React from 'react'
 
-function recipeCard({ index }) {
-
-    const [data, setData] = useState(recipeData)
+function recipeCard({ index, data }) {
 
     return (
         <div className=" bg-[#ACBFA4] text-white flex px-[20px] py-[40px] items-center gap-[20px] flex-col rounded-xl hover:bg-[#B2BFAD] cursor-pointer shadow hover:shadow-xl" >
