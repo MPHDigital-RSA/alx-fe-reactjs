@@ -10,7 +10,7 @@ function HomePage() {
     }, []);
 
     return (
-        < div className='grid gap-5 grid-cols-1 sm:grid-cols-2 max-w-[900px] w-[100%] mx-[auto]' >
+        < div className='grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-[900px] w-[100%] mx-[auto]' >
 
             {recipes.map((recipe) => {
 
