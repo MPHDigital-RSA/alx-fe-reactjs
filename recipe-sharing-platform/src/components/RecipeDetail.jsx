@@ -40,7 +40,7 @@ function RecipeDetail() {
 
                 <div className='flex flex-col bg-[#ACBFA4] p-[20px] rounded-xl text-white w-[100%] max-w-[900px] text-center sm:text-left '>
                     <h1 className='text-[24px] font-semibold mb-[10px]'>Method</h1>
-                    <p>{currentRecipe.method}</p>
+                    <p>{currentRecipe.instructions}</p>
                 </div>
             </div>
 
