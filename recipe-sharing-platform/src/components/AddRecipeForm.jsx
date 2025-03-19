@@ -17,7 +17,11 @@ function AddRecipeForm() {
         e.preventDefault();
         // set errors to empty strings since the inputs are not empty
         setErrors({ title: '', ingredients: '', steps: '' })
+        validate();
+        console.log("form submitted!")
+    }
 
+    const validate = () => {
         // validation for title
         if (title === "") {
             setErrors({ ...errors, title: "title not defined" });
@@ -35,8 +39,6 @@ function AddRecipeForm() {
             setErrors({ ...errors, steps: "steps not defined" });
             return;
         }
-
-        console.log("form submitted!")
     }
 
 
