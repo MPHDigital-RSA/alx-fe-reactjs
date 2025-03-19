@@ -16,6 +16,11 @@ function HomePage() {
 
     return (
         <div className='px-[30px] py-[50px]'>
+
+            <div className='flex justify-center mb-[30px]'>
+                <Link to='/add-recipe' className='bg-[#ACBFA4] text-white rounded-lg py-[10px] px-[20px] hover:bg-black transition cursor-pointer shadow'>Add Recipe</Link>
+            </div>
+
             < div className='grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-[900px] w-[100%] mx-[auto]' >
 
                 {recipes.map((recipe) => {
