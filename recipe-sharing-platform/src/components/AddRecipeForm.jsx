@@ -19,6 +19,14 @@ function AddRecipeForm() {
         setErrors({ title: '', ingredients: '', steps: '' })
         validate();
         console.log("form submitted!")
+
+        setTitle(title);
+        setIngredients(ingredients);
+        setSteps(steps)
+
+        console.log(title)
+        console.log(ingredients)
+        console.log(steps)
     }
 
     const validate = () => {
@@ -47,12 +55,19 @@ function AddRecipeForm() {
 
             <Link to='/' className='bg-[#ACBFA4] text-white rounded-lg py-[10px] px-[20px] hover:bg-black transition cursor-pointer shadow'>Home</Link>
 
-            <div className='w-[100%] max-w-[500px] bg-[#ACBFA4] p-[30px] rounded-xl flex flex-col gap-3'>
-                <input type="text" placeholder='Recipe Title' className='p-3 rounded-md' onChange={(e) => setTitle(e.target.value)} />
+            <form className='w-[100%] max-w-[500px] bg-[#ACBFA4] p-[30px] rounded-xl flex flex-col gap-3' onSubmit={handleSubmit}>
+
+                <input type="text" placeholder='Recipe Title' className='p-3 rounded-md' value={title} onChange={(e) => setTitle(e.target.value)} />
                 {errors.title && <div className='text-[18px] text-red-600'> {errors.title} </div>}
-                <textarea placeholder='Enter Ingredients' className='p-3 rounded-md'></textarea>
-                <button type='submit' className='p-3 rounded-md bg-white text-[#ACBFA4] font-bold hover:bg-black hover:text-white transition' onSubmit={handleSubmit}>Add Recipe</button>
-            </div>
+
+                <textarea placeholder='Enter Ingredients' className='p-3 rounded-md' value={ingredients} onChange={(e) => setIngredients(e.target.value)}></textarea>
+                {errors.ingredients && <div className='text-[18px] text-red-600'> {errors.ingredients} </div>}
+
+                <textarea placeholder='Enter the steps' className='p-3 rounded-md' value={steps} onChange={(e) => setSteps(e.target.value)}></textarea>
+                {errors.steps && <div className='text-[18px] text-red-600'> {errors.steps} </div>}
+
+                <button type='submit' className='p-3 rounded-md bg-white text-[#ACBFA4] font-bold hover:bg-black hover:text-white transition'>Add Recipe</button>
+            </form>
         </div>
     )
 }

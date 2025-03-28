@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import recipeData from '../data.json'
 import { Link } from 'react-router-dom';
+import userRecipeStore from '../recipeStore'
 
 function HomePage() {
+
+    // const recipes = userRecipeStore((state) => state.recipes)
 
     const [recipes, setRecipes] = useState(recipeData)
 
